@@ -10,7 +10,11 @@ document.querySelector("#generate").addEventListener("click", performAction);
 
 function performAction() {
   getWeatherDataBasedOnZipCode()
-    .then(data => postData("/newData", data))
+    .then(data => postData("/newData", { temperature: data.main.temp,
+                                         date: newDate,
+                                         content: document.querySelector("#feelings").value
+                                       })
+     )
     .then(updateUI);
 }
 
@@ -27,8 +31,6 @@ async function getWeatherDataBasedOnZipCode() {
 }
 
 async function postData(url, data) {
-  const content = document.querySelector("#feelings").value;
-
   try {
     await fetch(url, {
         method: "POST",
@@ -36,10 +38,7 @@ async function postData(url, data) {
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({ temperature: data.main.temp,
-                               date: newDate,
-                               content: content
-                            })
+        body: JSON.stringify(data)
     });
    } catch(error) {
       console.error("Unable to save data, Reason:", error);
