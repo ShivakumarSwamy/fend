@@ -14,7 +14,7 @@ This project requires you to create an asynchronous web app that uses Web API an
 
 1. Run locally server and client as mentioned above
 2. Insert zipcode of any place in India, in "Enter India Zipcode here"
-3. Enter your feeling in "How are you feeling today?"
+3. Enter your feeling in "How are you feeling today?" and Click on Generate Button
 4. Notice in the bottom of the page under "Most Recent Entry" that zipcode temperature in Celsius 
    and your feeling on the weather
 
