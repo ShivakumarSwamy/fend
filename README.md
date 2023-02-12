@@ -6,8 +6,8 @@ This project requires you to create an asynchronous web app that uses Web API an
 ## Run locally
 
 1. Install [nodejs](https://nodejs.org/en/) if not present
-2. Run `npm install` to install all dependencies
-3. Run `node server.js` to run application server
+2. Run `npm install` to install all dependencies in command line
+3. Run `node server.js` to run application server in command line
 4. Open http://localhost:3000 to view webpage
 
 ## Insert Weather Data Based on Zipcode
